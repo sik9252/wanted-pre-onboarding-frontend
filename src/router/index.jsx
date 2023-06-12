@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 /** pages */
-import Main from "../pages/Main";
 import SignUp from "../pages/SignUp";
 import SignIn from "../pages/SignIn";
 import Todo from "../pages/Todo";
@@ -13,7 +12,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="*" element={<PageNotFound />} />
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Navigate replace to="/signin" />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/todo" element={<Todo />} />
