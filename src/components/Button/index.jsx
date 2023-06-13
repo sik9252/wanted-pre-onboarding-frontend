@@ -1,7 +1,10 @@
 import React from "react";
+import { StyledButton } from "./style";
 
-function Input() {
-  return <div>Input</div>;
-}
-
-export default Input;
+export const Button = ({ children, width, height, onClick }) => {
+  return (
+    <StyledButton width={width} height={height} onClick={onClick}>
+      {children}
+    </StyledButton>
+  );
+};

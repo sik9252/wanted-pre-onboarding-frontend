@@ -1,0 +1,17 @@
+const COLOR = {
+  WHITE: "#FFFFFF",
+  BLACK: "#000000",
+
+  GREEN_0: "#FEFBE9",
+  GREEN_1: "#E3F2C1",
+  GREEN_2: "#C9DBB2",
+  GREEN_3: "#AAC8A7",
+  GREEN_4: "#A6BB8D",
+  GREEN_5: "#9DC088",
+  GREEN_6: "#609966",
+  GREEN_7: "#61876E",
+  GREEN_8: "#3C6255",
+  GREEN_9: "#40513B",
+};
+
+export default COLOR;
