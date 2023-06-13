@@ -1,7 +1,14 @@
 import React from "react";
+import { StyledInputBox } from "./style";
 
-function Button() {
-  return <div>Button</div>;
-}
-
-export default Button;
+export const InputBox = ({ width, height, value, placeholder, onChange }) => {
+  return (
+    <StyledInputBox
+      width={width}
+      height={height}
+      value={value}
+      placeholder={placeholder}
+      onChange={onChange}
+    />
+  );
+};
