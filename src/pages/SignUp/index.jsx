@@ -16,9 +16,17 @@ import {
   checkEmailValidate,
   checkPasswordValidate,
 } from "../../utils/InputManage/checkInputValidate";
+import { checkAuth } from "../../utils/AuthManage";
 
 function SignUp() {
   const navigate = useNavigate();
+
+  // 로그인된 상태인지 검사
+  useEffect(() => {
+    if (checkAuth()) {
+      navigate("/todo");
+    }
+  }, []);
 
   // 입력한 데이터 유효성 검증 여부
   const [isValidatedEmail, setIsValidatedEmail] = useState(false);
@@ -71,7 +79,6 @@ function SignUp() {
       signUpRequest(inputData)
         .then((res) => {
           if (res) {
-            alert("회원가입이 완료되었습니다!");
             navigate("/signin");
           }
         })
