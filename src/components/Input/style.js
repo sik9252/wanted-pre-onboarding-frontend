@@ -3,7 +3,7 @@ import COLOR from "../../styles/colors";
 
 export const StyledInputBox = styled.input`
   width: 100%;
-  height: ${({ height }) => (height ? `${height}px` : "58px")};
+  height: 30px;
   border: none;
   padding: 10px;
   border-radius: 7px;
