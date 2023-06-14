@@ -105,6 +105,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     line-height: 1;
+    letter-spacing: 0.6px;
   }
   ol,
   ul {
