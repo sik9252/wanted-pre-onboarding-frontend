@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 /** components */
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 
 /** styles */
-import { SignInContainer, Title, InputBox, ButtonBox } from "./style";
+import {
+  SignInContainer,
+  Title,
+  InputBox,
+  ButtonBox,
+  GotoSignUp,
+} from "./style";
 
 /** axios */
 import { signInRequest } from "../../utils/axiosManage/AuthAxios";
@@ -16,9 +22,17 @@ import {
   checkEmailValidate,
   checkPasswordValidate,
 } from "../../utils/InputManage/checkInputValidate";
+import { checkAuth } from "../../utils/AuthManage";
 
 function SignIn() {
   const navigate = useNavigate();
+
+  // 로그인된 상태인지 검사
+  useEffect(() => {
+    if (checkAuth()) {
+      navigate("/todo");
+    }
+  }, []);
 
   // 입력한 데이터 유효성 검증 여부
   const [isValidatedEmail, setIsValidatedEmail] = useState(false);
@@ -71,7 +85,6 @@ function SignIn() {
       signInRequest(inputData)
         .then((res) => {
           if (res) {
-            alert("로그인에 성공하였습니다!");
             localStorage.setItem("access_token", res.data.access_token);
             navigate("/todo");
           }
@@ -113,6 +126,9 @@ function SignIn() {
           로그인
         </Button>
       </ButtonBox>
+      <GotoSignUp>
+        아직 회원이 아니신가요? <Link to="/signup">회원가입 하러가기</Link>
+      </GotoSignUp>
     </SignInContainer>
   );
 }

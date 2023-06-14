@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import COLOR from "../../styles/colors";
 
 export const SignUpContainer = styled.div`
   width: 500px;
@@ -13,6 +14,7 @@ export const Title = styled.div`
   font-weight: 600;
   text-align: center;
   margin-bottom: 20px;
+  color: ${COLOR.GREEN_9};
 `;
 
 export const InputBox = styled.div`
