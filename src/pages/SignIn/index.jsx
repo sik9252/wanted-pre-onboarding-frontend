@@ -84,10 +84,8 @@ function SignIn() {
 
       signInRequest(inputData)
         .then((res) => {
-          if (res) {
-            localStorage.setItem("access_token", res.data.access_token);
-            navigate("/todo");
-          }
+          localStorage.setItem("access_token", res.data.access_token);
+          navigate("/todo");
         })
         .catch((error) => {
           alert(error.response.data.message);
