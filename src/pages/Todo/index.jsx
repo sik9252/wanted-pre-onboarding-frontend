@@ -44,7 +44,11 @@ function Todo() {
         setTodoListData(res.data);
       })
       .catch((err) => {
-        alert(err.response.data.message);
+        if (err.response.data.statusCode === 401) {
+          navigate("/signin");
+        } else {
+          alert(err.response.data.message);
+        }
       });
   };
 
