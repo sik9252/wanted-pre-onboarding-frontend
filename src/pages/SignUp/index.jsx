@@ -94,14 +94,14 @@ function SignUp() {
       <InputBox>
         <div>
           <Input
-            data-testid="email-input"
+            data_testid="email-input"
             placeholder={"이메일"}
             onChange={onChangeUserEmail}
           />
         </div>
         <div>
           <Input
-            data-testid="password-input"
+            data_testid="password-input"
             type={"password"}
             placeholder={"비밀번호 (8자리 이상)"}
             onChange={onChangeUserPassword}
@@ -110,7 +110,7 @@ function SignUp() {
       </InputBox>
       <ButtonBox>
         <Button
-          data-testid="signup-button"
+          data_testid="signup-button"
           width={200}
           height={40}
           isAllValidateChecked={isAllValidateChecked}

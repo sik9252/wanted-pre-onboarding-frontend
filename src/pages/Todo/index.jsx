@@ -154,13 +154,13 @@ function Todo() {
       <Title>TODO 리스트</Title>
       <InputBox>
         <Input
-          data-testid="new-todo-input"
+          data_testid="new-todo-input"
           value={todo}
           placeholder={"할 일을 적어주세요."}
           onChange={onChangeTodo}
         />
         <Button
-          data-testid="new-todo-add-button"
+          data_testid="new-todo-add-button"
           width={125}
           isAllValidateChecked={true}
           onClick={() => clickAddTodoButton()}
@@ -181,7 +181,7 @@ function Todo() {
                   />
                   <span>
                     <Input
-                      data-testid="modify-input"
+                      data_testid="modify-input"
                       defaultValue={todo.todo}
                       onChange={(e) => onChangeNewTodo(e, index)}
                     />
@@ -189,7 +189,7 @@ function Todo() {
                 </label>
                 <TodoOption>
                   <Button
-                    data-testid="submit-button"
+                    data_testid="submit-button"
                     width={50}
                     isAllValidateChecked={true}
                     onClick={() => clickUpdateButton(todo, index)}
@@ -197,7 +197,7 @@ function Todo() {
                     제출
                   </Button>
                   <Button
-                    data-testid="cancel-button"
+                    data_testid="cancel-button"
                     width={50}
                     isAllValidateChecked={true}
                     onClick={() => clickCancelButton(index)}
@@ -218,7 +218,7 @@ function Todo() {
                 </label>
                 <TodoOption>
                   <Button
-                    data-testid="modify-button"
+                    data_testid="modify-button"
                     width={50}
                     isAllValidateChecked={true}
                     onClick={() => clickModifyButton(todo.todo, index)}
@@ -226,7 +226,7 @@ function Todo() {
                     수정
                   </Button>
                   <Button
-                    data-testid="delete-button"
+                    data_testid="delete-button"
                     width={50}
                     isAllValidateChecked={true}
                     onClick={() => clickDeleteButton(todo.id)}

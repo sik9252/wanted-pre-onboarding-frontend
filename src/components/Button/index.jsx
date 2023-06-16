@@ -7,6 +7,7 @@ export const Button = ({
   height,
   onClick,
   isAllValidateChecked,
+  data_testid,
 }) => {
   return (
     <StyledButton
@@ -14,6 +15,7 @@ export const Button = ({
       height={height}
       onClick={onClick}
       disabled={isAllValidateChecked ? "" : "disabled"}
+      data-testid={data_testid}
     >
       {children}
     </StyledButton>
