@@ -16,7 +16,3 @@ $ npm start
 ```
 
 <br>
-
-## 3. 배포 링크
-
-https://web-wanted-pre-onboarding-frontend-koh2xlixy7104.sel4.cloudtype.app
